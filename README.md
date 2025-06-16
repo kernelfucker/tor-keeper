@@ -1,2 +1,2 @@
 # tor-keeper
-system-wide tor shell script
+system-wide tor keeper
