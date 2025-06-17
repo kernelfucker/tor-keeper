@@ -5,7 +5,7 @@ system-wide tor keeper/tunnel
 $ clang tor-keeper.c -o tor-keeper
 
 # usage
-important: do not forget to backup the torrc you are using
+**important: do not forget to backup the torrc you are using**
 
 note: this program must be run as root
 
