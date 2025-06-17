@@ -14,19 +14,19 @@ $ ./tor-keeper --force-stop
 etc..
 
 # options
-`--start        start tor with transparent proxy on keeper`
+--start
 
---stop                stop tor and reset firewall
+--stop
 
---force-stop          force kill tor without resetting firewall
+--force-stop
 
---status              show current tor status and few information
+--status
 
---strict              enable strict nodes selection
+--strict
 
---random              use random exit nodes
+--random
 
---exit-nodes X        set custom exit nodes, comma-separated
+--exit-nodes
 
 # example
 ![image](https://github.com/user-attachments/assets/33fa45e7-9a91-4c61-aa54-87582b1df265)
