@@ -14,7 +14,7 @@ $ ./tor-keeper --force-stop
 etc..
 
 # options
---start               start tor with transparent proxy on keeper
+--start        start tor with transparent proxy on keeper
 
 --stop                stop tor and reset firewall
 
