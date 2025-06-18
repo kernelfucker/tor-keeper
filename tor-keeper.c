@@ -191,6 +191,7 @@ void status(){
 		printf("[+] tor is running\n");
 		system("echo [+] hostname: $(uname -n)\n");
 		system("echo [+] kernel: $(uname -r)\n");	
+		system("echo [+] user: $(whoami)\n");
 		printf("[!] verify with: $ netstat -tlnpau | grep -F 9050\n");
 	} else {
 		printf("[!] tor is not running, check that port 9050 is open\n");
