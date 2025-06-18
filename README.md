@@ -31,4 +31,4 @@ etc..
 --exit-nodes
 
 # example
-![image](https://github.com/user-attachments/assets/33fa45e7-9a91-4c61-aa54-87582b1df265)
+![image](https://github.com/user-attachments/assets/e0b82019-5abb-43e3-bd02-b5bb5d23686a)
