@@ -17,12 +17,12 @@ etc..
 
 # options
 ```
-  --start		start tor with transparent proxy on keeper
-  --stop		stop tor and reset firewal
+  --start		      start tor with transparent proxy on keeper
+  --stop		      stop tor and reset firewal
   --force-stop		force kill tor without resetting firewal
-  --status		show current tor status and few informatio
-  --strict		enable strict nodes selectio
-  --random		use random exit node
+  --status		    show current tor status and few informatio
+  --strict		    enable strict nodes selectio
+  --random		    use random exit node
   --exit-nodes X	set custom exit nodes, comma-separate
 ```
 # example
