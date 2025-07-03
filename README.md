@@ -20,7 +20,7 @@ etc..
   -s    start tor with transparent proxy on keeper
   -x    stop tor and reset firewal
   -fx   force kill tor without resetting firewal
-  -t    show current tor status and few informatio
+  -t    show current tor status and few information
   -c    enable strict nodes selectio
   -r    use random exit node
   -e X  set custom exit nodes, comma-separate
