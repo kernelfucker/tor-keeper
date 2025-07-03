@@ -26,4 +26,4 @@ etc..
   -e X  set custom exit nodes, comma-separate
 ```
 # example
-![image](https://github.com/user-attachments/assets/e0b82019-5abb-43e3-bd02-b5bb5d23686a)
+![image](https://github.com/user-attachments/assets/736ff965-4cea-48de-b7cc-458059cc2f6b)
