@@ -2,7 +2,7 @@
 system-wide tor keeper/tunnel
 
 # compile
-$ clang tor-keeper.c -o tor-keeper
+$ clang tor-keeper.c -o tor-keeper -Os -s
 
 # usage
 important: do not forget to backup the **torrc** you are using
