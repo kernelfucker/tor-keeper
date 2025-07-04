@@ -22,6 +22,8 @@
 #define tor_pidf "/var/run/tor.pid"
 #define logf "/var/log/torctrl.log"
 
+#define version "0.2"
+
 typedef struct{
 	int strictnodes;
 	int random_exitnodes;
@@ -199,18 +201,17 @@ void status(){
 }
 
 void help(){
-	printf("tor-keeper - system-wide tor keeper/tunnel\n");
-	printf("note: this program must be run as root\n");
 	printf("usage: tor-keeper [options]..\n");
 	printf("options:\n");
-	printf("  --start		start tor with transparent proxy on keeper\n");
-	printf("  --stop		stop tor and reset firewall\n");
-	printf("  --force-stop		force kill tor without resetting firewall\n");
-	printf("  --status		show current tor status and few information\n");
-	printf("  --strict		enable strict nodes selection\n");
-	printf("  --random		use random exit nodes\n");
-	printf("  --exit-nodes X	set custom exit nodes, comma-separated\n");
-	printf("  --help		display this\n");
+	printf("  -s	start tor with transparent proxy on keeper\n");
+	printf("  -x	stop tor and reset firewall\n");
+	printf("  -fx	force kill tor without resetting firewall\n");
+	printf("  -t	show current tor status and few information\n");
+	printf("  -c	enable strict nodes selection\n");
+	printf("  -r	use random exit nodes\n");
+	printf("  -e X	set custom exit nodes, comma-separated\n");
+	printf("  -v	show version information\n");
+	printf("  -h	display this\n");
 }
 
 int main(int argc, char *argv[]){
@@ -225,29 +226,32 @@ int main(int argc, char *argv[]){
 	}
 
 	for(int i = 1; i < argc; i++){
-		if(strcmp(argv[i], "--start") == 0){
+		if(strcmp(argv[i], "-s") == 0){
 			st_tor();
 		}
-		else if(strcmp(argv[i], "--stop") == 0){
+		else if(strcmp(argv[i], "-x") == 0){
 			stop_tor();
 		}
-		else if(strcmp(argv[i], "--force-stop") == 0){
+		else if(strcmp(argv[i], "-fx") == 0){
 			force_stop_tor();
 		}
-		else if(strcmp(argv[i], "--status") == 0){
+		else if(strcmp(argv[i], "-t") == 0){
 			status();
 		}
-		else if(strcmp(argv[i], "--strict") == 0){
+		else if(strcmp(argv[i], "-c") == 0){
 			ts.strictnodes = 1;
 		}
-		else if(strcmp(argv[i], "--random") == 0){
+		else if(strcmp(argv[i], "-r") == 0){
 			ts.random_exitnodes = 1;
 		}
-		else if(strcmp(argv[i], "--exit-nodes") == 0 && i+1 < argc){
+		else if(strcmp(argv[i], "-e") == 0 && i+1 < argc){
 			strncpy(ts.exitnodes, argv[++i], sizeof(ts.exitnodes)-1);
 		}
-		else if(strcmp(argv[i], "--help") == 0){
+		else if(strcmp(argv[i], "-h") == 0){
 			help();
+		}
+		else if(strcmp(argv[i], "-v") == 0){
+			printf("tor-keeper-%s\n", version);
 		}
 	}
 
