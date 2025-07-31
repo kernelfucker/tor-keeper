@@ -13,8 +13,6 @@ $ ./tor-keeper -s -c
 
 $ ./tor-keeper -fx
 
-etc..
-
 # options
 ```
   -s    start tor with transparent proxy on keeper
